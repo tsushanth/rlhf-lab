@@ -1,0 +1,10 @@
+transformers==4.44.2
+trl==0.9.6
+peft==0.12.0
+datasets==2.20.0
+accelerate==0.33.0
+bitsandbytes==0.43.3
+sentencepiece
+wandb
+openai
+anthropic

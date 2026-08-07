@@ -1,0 +1,13 @@
+# model checkpoints — large, regenerable, don't belong in git
+results/*
+!results/eval_report.md
+*.safetensors
+*.bin
+*.pt
+
+__pycache__/
+*.pyc
+.DS_Store
+.env
+venv/
+wandb/
