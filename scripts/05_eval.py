@@ -66,12 +66,19 @@ def main():
     parser.add_argument("--n-prompts", type=int, default=50)
     args = parser.parse_args()
 
-    checkpoints = {
-        "sft": os.path.join(args.results_dir, "sft"),
-        "ppo": os.path.join(args.results_dir, "ppo"),
-        "dpo": os.path.join(args.results_dir, "dpo"),
-    }
-    checkpoints = {k: v for k, v in checkpoints.items() if os.path.isdir(v)}
+    # Auto-discover any trained causal-LM checkpoint under results/ (sft,
+    # ppo, dpo, dpo_rlaif, ...) rather than a hardcoded list, so RLAIF
+    # variants trained via --out-name join the comparison automatically.
+    # reward_model* dirs are excluded -- they're sequence classifiers, not
+    # generation checkpoints, and have nothing to generate with here.
+    checkpoints = {}
+    if os.path.isdir(args.results_dir):
+        for name in sorted(os.listdir(args.results_dir)):
+            path = os.path.join(args.results_dir, name)
+            if name.startswith("reward_model"):
+                continue
+            if os.path.isfile(os.path.join(path, "config.json")):
+                checkpoints[name] = path
     if len(checkpoints) < 2:
         raise SystemExit("Need at least 2 trained checkpoints in results/ to compare. "
                           "Run 01_sft.py plus 03_ppo.py and/or 04_dpo.py first.")

@@ -8,15 +8,21 @@ import os
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from trl import RewardTrainer, RewardConfig
-from common import base_arg_parser, load_hh_rlhf
+from common import base_arg_parser, load_preference_pairs
 
 
 def main():
-    parser = base_arg_parser("Train reward model on HH-RLHF pairs")
+    parser = base_arg_parser("Train reward model on preference pairs")
     parser.add_argument("--epochs", type=int, default=1)
+    parser.add_argument("--data-file", default=None,
+                         help="jsonl of {chosen, rejected} transcripts (e.g. rlaif_preference_pairs.jsonl). "
+                              "Omit to use human-labeled HH-RLHF.")
+    parser.add_argument("--out-name", default="reward_model",
+                         help="subdir under results/ to save to -- use a distinct name (e.g. reward_model_rlaif) "
+                              "when training on RLAIF data so it doesn't overwrite the HH-RLHF version.")
     args = parser.parse_args()
 
-    out_dir = os.path.join(args.results_dir, "reward_model")
+    out_dir = os.path.join(args.results_dir, args.out_name)
     os.makedirs(out_dir, exist_ok=True)
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
@@ -28,7 +34,7 @@ def main():
     )
     model.config.pad_token_id = tokenizer.pad_token_id
 
-    raw = load_hh_rlhf(max_samples=args.max_samples)
+    raw = load_preference_pairs(data_file=args.data_file, max_samples=args.max_samples)
 
     # RewardTrainer (trl 0.9.x) expects pre-tokenized input_ids_chosen /
     # input_ids_rejected columns, not raw text.

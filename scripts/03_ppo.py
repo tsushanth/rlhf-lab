@@ -23,7 +23,7 @@ def main():
     parser.add_argument("--sft-checkpoint", default=os.path.join(RESULTS_DIR, "sft"))
     parser.add_argument("--reward-model", default=os.path.join(RESULTS_DIR, "reward_model"))
     parser.add_argument("--steps", type=int, default=200)
-    parser.add_argument("--kl-coef", type=float, default=0.05,
+    parser.add_argument("--kl-coef", type=float, default=0.2,
                          help="higher = stays closer to SFT policy, lower = more reward-seeking (and more prone to hacking)")
     args = parser.parse_args()
 
@@ -48,10 +48,52 @@ def main():
     ppo_config = PPOConfig(
         learning_rate=1.4e-5,
         batch_size=16,
+        # mini_batch_size=4 with trl's default ppo_epochs=4 meant 4 gradient
+        # steps per 4-sample slice -> the policy overfit each mini-batch fast
+        # enough to blow the importance-sampling ratio past trl's own
+        # sanity threshold ("average ratio of batch exceeds threshold 10"),
+        # which is what drove objective/kl negative. Raising mini_batch_size
+        # to reduce that noise OOMs this GPU with 4 bf16 models resident
+        # (policy+value head, ref policy, reward model), so instead cut
+        # ppo_epochs to 2 -- fewer gradient steps per mini-batch means less
+        # room to overfit it even at the same mini_batch_size.
         mini_batch_size=4,
+        ppo_epochs=2,
         init_kl_coef=args.kl_coef,
         target=6.0,
         steps=args.steps,
+        # Diagnosed via ppo/val/var_explained = -0.92 on a fresh run: the
+        # value head is randomly initialized (AutoModelForCausalLMWithValueHead
+        # adds it fresh on top of the SFT checkpoint) and default vf_coef=0.1
+        # barely trains it relative to the policy loss, so early advantage
+        # estimates are computed against a near-random baseline -- garbage
+        # advantages, garbage policy gradient, which is what showed up as
+        # mean_reward trending down and KL oscillating wildly rather than
+        # converging. Raising vf_coef gives the value function's loss much
+        # more weight in the combined objective so it actually learns fast
+        # enough to become a useful baseline within the run's step budget.
+        vf_coef=1.0,
+        # trl's PPOConfig defaults max_grad_norm to None (no clipping). A
+        # 500-step run with vf_coef=1.0 hit a single outlier batch at step
+        # 211 (policy_loss spiked to 3.1) whose unclipped gradient pushed
+        # the policy weights to NaN -- generation then produced NaN/inf
+        # softmax probabilities and the process crashed outright. Standard
+        # PPO implementations (e.g. CleanRL, OpenAI's baselines) clip to 0.5
+        # by default specifically to survive this kind of single-batch
+        # outlier; trl doesn't turn it on for you.
+        max_grad_norm=0.5,
+        # Normalize+clip the reward model's raw score before it hits the
+        # advantage computation. The RM's outputs aren't calibrated to any
+        # particular scale (observed mean ~-3, std ~1.5, pairwise accuracy
+        # only 68%) -- without this, an occasional high-magnitude/noisy
+        # score can dominate the advantage and cause a large, destabilizing
+        # policy update.
+        use_score_scaling=True,
+        use_score_norm=True,
+        score_clip=3.0,
+        # Skip the PPO update entirely on batches where KL already exceeds
+        # 1.5x target, instead of pushing the policy further off distribution.
+        early_stopping=True,
     )
 
     trainer = PPOTrainer(
@@ -90,13 +132,36 @@ def main():
         ).to(device)
         with torch.no_grad():
             rewards = reward_model(**reward_inputs).logits.squeeze(-1)
+        # Two full 500-step runs crashed to NaN despite gradient clipping --
+        # once at step 211 (mid-run) and once at step 499 (the very last
+        # step, both non-deterministic w.r.t. step count). Clipping bounds
+        # gradient *norm*, but a single inf/nan reward from the reward model
+        # on some degenerate/edge-case generation propagates through the
+        # loss untouched by norm clipping (nan/inf survive clipping). Sanitize
+        # at the source instead of hoping it never happens again.
+        rewards = torch.nan_to_num(rewards, nan=0.0, posinf=10.0, neginf=-10.0)
         reward_list = [r for r in rewards]
 
         stats = trainer.step(query_tensors, response_tensors, reward_list)
-        if step % 10 == 0:
-            mean_reward = float(rewards.mean())
-            kl = stats.get("objective/kl", float("nan"))
-            print(f"step {step}/{args.steps}  mean_reward={mean_reward:.3f}  kl={kl:.3f}")
+        mean_reward = float(rewards.mean())
+        kl = float(stats.get("ppo/policy/policykl", float("nan")))
+        var_explained = float(stats.get("ppo/val/var_explained", float("nan")))
+        policy_loss = float(stats.get("ppo/loss/policy", float("nan")))
+        print(f"step {step}/{args.steps}  mean_reward={mean_reward:.3f}  kl={kl:.4f}  "
+              f"val_var_explained={var_explained:.3f}  policy_loss={policy_loss:.4f}", flush=True)
+
+        # Both prior full runs completed all steps and only went NaN at the
+        # very end (or crashed mid-run before ever reaching save_pretrained)
+        # -- with saving only happening after the loop, either failure mode
+        # threw away hours of otherwise-good training. Checkpoint into a
+        # rotating slot periodically so the last known-good state survives
+        # a late crash; overwrite in place rather than keeping every
+        # snapshot; only 1.5B params so overhead is well within budget.
+        if step > 0 and step % 100 == 0:
+            ckpt_dir = out_dir + "_checkpoint"
+            trainer.save_pretrained(ckpt_dir)
+            tokenizer.save_pretrained(ckpt_dir)
+            print(f"  [checkpoint saved at step {step} -> {ckpt_dir}]", flush=True)
 
     trainer.save_pretrained(out_dir)
     tokenizer.save_pretrained(out_dir)

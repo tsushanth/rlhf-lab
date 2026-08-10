@@ -11,7 +11,7 @@ import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from trl import DPOTrainer, DPOConfig
-from common import base_arg_parser, load_hh_rlhf, split_prompt_response, RESULTS_DIR
+from common import base_arg_parser, load_preference_pairs, split_prompt_response, RESULTS_DIR
 
 
 def main():
@@ -20,9 +20,15 @@ def main():
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--beta", type=float, default=0.1,
                          help="how strongly to penalize deviating from the SFT reference policy")
+    parser.add_argument("--data-file", default=None,
+                         help="jsonl of {chosen, rejected} transcripts (e.g. rlaif_preference_pairs.jsonl). "
+                              "Omit to use human-labeled HH-RLHF.")
+    parser.add_argument("--out-name", default="dpo",
+                         help="subdir under results/ to save to -- use a distinct name (e.g. dpo_rlaif) "
+                              "when training on RLAIF data so it doesn't overwrite the HH-RLHF version.")
     args = parser.parse_args()
 
-    out_dir = os.path.join(args.results_dir, "dpo")
+    out_dir = os.path.join(args.results_dir, args.out_name)
     os.makedirs(out_dir, exist_ok=True)
 
     tokenizer = AutoTokenizer.from_pretrained(args.sft_checkpoint)
@@ -39,7 +45,7 @@ def main():
     ref_model = AutoModelForCausalLM.from_pretrained(args.sft_checkpoint, torch_dtype=torch.bfloat16)
     ref_model.config.pad_token_id = tokenizer.pad_token_id
 
-    raw = load_hh_rlhf(max_samples=args.max_samples)
+    raw = load_preference_pairs(data_file=args.data_file, max_samples=args.max_samples)
 
     # DPOTrainer wants separate prompt / chosen / rejected columns, where
     # chosen and rejected are just the completions. hh-rlhf packs the whole
