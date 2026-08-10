@@ -25,6 +25,11 @@ def main():
     parser.add_argument("--steps", type=int, default=200)
     parser.add_argument("--kl-coef", type=float, default=0.2,
                          help="higher = stays closer to SFT policy, lower = more reward-seeking (and more prone to hacking)")
+    parser.add_argument("--resume-from", default=None,
+                         help="path to a periodic checkpoint (e.g. results/ppo_checkpoint) to resume the "
+                              "policy from after an interrupted run, instead of starting fresh from SFT")
+    parser.add_argument("--start-step", type=int, default=0,
+                         help="step count to resume the batch cursor / step counter from, matching --resume-from")
     args = parser.parse_args()
 
     out_dir = os.path.join(args.results_dir, "ppo")
@@ -34,8 +39,12 @@ def main():
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    policy = AutoModelForCausalLMWithValueHead.from_pretrained(args.sft_checkpoint, torch_dtype=torch.bfloat16)
+    policy_source = args.resume_from if args.resume_from else args.sft_checkpoint
+    policy = AutoModelForCausalLMWithValueHead.from_pretrained(policy_source, torch_dtype=torch.bfloat16)
     policy.config.pad_token_id = tokenizer.pad_token_id
+    # The reference policy for the KL penalty always stays anchored to the
+    # original SFT checkpoint, even when resuming -- it's the fixed point
+    # PPO measures drift against, not something that should itself resume.
     ref_policy = AutoModelForCausalLMWithValueHead.from_pretrained(args.sft_checkpoint, torch_dtype=torch.bfloat16)
     ref_policy.config.pad_token_id = tokenizer.pad_token_id
 
@@ -113,7 +122,7 @@ def main():
                   "pad_token_id": tokenizer.pad_token_id}
 
     batch_size = ppo_config.batch_size
-    for step in range(args.steps):
+    for step in range(args.start_step, args.steps):
         batch_prompts = prompts[(step * batch_size) % len(prompts):][:batch_size]
         if len(batch_prompts) < batch_size:
             batch_prompts += prompts[: batch_size - len(batch_prompts)]
