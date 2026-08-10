@@ -131,7 +131,7 @@ def main():
     # batch" guard fires but doesn't fully prevent the corruption; the next
     # generate() call then crashes on NaN weights. Roll back in memory
     # instead of crashing the whole run over one bad batch.
-    last_good_state = {k: v.detach().clone() for k, v in policy.state_dict().items()}
+    last_good_state = {k: v.detach().cpu().clone() for k, v in policy.state_dict().items()}
     for step in range(args.start_step, args.steps):
         batch_prompts = prompts[(step * batch_size) % len(prompts):][:batch_size]
         if len(batch_prompts) < batch_size:
@@ -170,12 +170,12 @@ def main():
         if any(map(lambda x: x != x, (kl, var_explained, policy_loss))):  # nan-safe check, no numpy import needed
             print(f"step {step}/{args.steps}  NaN detected (kl={kl} policy_loss={policy_loss}) "
                   f"-- rolling back to last known-good weights and continuing", flush=True)
-            policy.load_state_dict(last_good_state)
+            policy.load_state_dict({k: v.to(device) for k, v in last_good_state.items()})
         else:
             print(f"step {step}/{args.steps}  mean_reward={mean_reward:.3f}  kl={kl:.4f}  "
                   f"val_var_explained={var_explained:.3f}  policy_loss={policy_loss:.4f}", flush=True)
             if step % 10 == 0:
-                last_good_state = {k: v.detach().clone() for k, v in policy.state_dict().items()}
+                last_good_state = {k: v.detach().cpu().clone() for k, v in policy.state_dict().items()}
 
         # Both prior full runs completed all steps and only went NaN at the
         # very end (or crashed mid-run before ever reaching save_pretrained)
