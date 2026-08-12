@@ -1,0 +1,65 @@
+Some weights of the model checkpoint at /workspace/rlhf-lab/results/ppo_checkpoint were not used when initializing Qwen2ForCausalLM: ['v_head.summary.bias', 'v_head.summary.weight']
+- This IS expected if you are initializing Qwen2ForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Qwen2ForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:266: UserWarning: No dataset is provided. Make sure to set config.batch_size to the correct value before training.
+  warnings.warn(
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (573.82) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (396075.75) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (8429418053632.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (179491168.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1352878592.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (507288787877888.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -685.57 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 200/500  mean_reward=-2.766  kl=-0.4009  val_var_explained=0.897  policy_loss=0.0428
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1422: UserWarning: Cannot retrieve user information assuming you are running in offline mode.
+  warnings.warn("Cannot retrieve user information assuming you are running in offline mode.")
+  [checkpoint saved at step 200 -> /workspace/rlhf-lab/results/ppo_checkpoint]
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -828.34 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 201/500  mean_reward=-3.688  kl=0.2994  val_var_explained=0.890  policy_loss=0.1106
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -621.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 202/500  mean_reward=-3.656  kl=0.4136  val_var_explained=0.917  policy_loss=0.0393
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -653.93 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 203/500  mean_reward=-4.750  kl=0.2892  val_var_explained=0.928  policy_loss=0.0677
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1400.55 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 204/500  mean_reward=-5.688  kl=0.0319  val_var_explained=0.902  policy_loss=0.0700
+Traceback (most recent call last):
+  File "/workspace/rlhf-lab/scripts/03_ppo.py", line 199, in <module>
+    main()
+  File "/workspace/rlhf-lab/scripts/03_ppo.py", line 164, in main
+    stats = trainer.step(query_tensors, response_tensors, reward_list)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py", line 824, in step
+    train_stats = self.train_minibatch(
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py", line 1089, in train_minibatch
+    loss_p, loss_v, train_stats = self.loss(
+                                  ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py", line 1244, in loss
+    entropy = masked_mean(entropy_from_logits(logits), mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/trl/core.py", line 199, in entropy_from_logits
+    pd = torch.nn.functional.softmax(logits, dim=-1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 1888, in softmax
+    ret = input.softmax(dim)
+          ^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.61 GiB. GPU 0 has a total capacity of 44.42 GiB of which 2.20 GiB is free. Including non-PyTorch memory, this process has 42.21 GiB memory in use. Of the allocated memory 40.01 GiB is allocated by PyTorch, and 1.88 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,1237 @@
+Some weights of the model checkpoint at /workspace/rlhf-lab/results/ppo_checkpoint were not used when initializing Qwen2ForCausalLM: ['v_head.summary.bias', 'v_head.summary.weight']
+- This IS expected if you are initializing Qwen2ForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Qwen2ForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:266: UserWarning: No dataset is provided. Make sure to set config.batch_size to the correct value before training.
+  warnings.warn(
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (2632.42) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (8130993664.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (2799706.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -383.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 200/500  mean_reward=-4.125  kl=0.3293  val_var_explained=0.889  policy_loss=0.5775
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1422: UserWarning: Cannot retrieve user information assuming you are running in offline mode.
+  warnings.warn("Cannot retrieve user information assuming you are running in offline mode.")
+  [checkpoint saved at step 200 -> /workspace/rlhf-lab/results/ppo_checkpoint]
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -837.82 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 201/500  mean_reward=-3.859  kl=0.3324  val_var_explained=0.901  policy_loss=0.0261
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -642.14 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 202/500  mean_reward=-4.031  kl=0.3349  val_var_explained=0.919  policy_loss=0.0343
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -673.78 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 203/500  mean_reward=-4.906  kl=0.1847  val_var_explained=0.929  policy_loss=0.0474
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1355.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 204/500  mean_reward=-5.750  kl=0.0561  val_var_explained=0.908  policy_loss=0.0534
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1956.07 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 205/500  mean_reward=-5.625  kl=0.0541  val_var_explained=0.884  policy_loss=0.0566
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1832.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 206/500  mean_reward=-5.562  kl=0.0748  val_var_explained=0.890  policy_loss=0.0071
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3099.54) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1792.20 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 207/500  mean_reward=-4.250  kl=0.0333  val_var_explained=0.889  policy_loss=0.1118
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5539.07) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1821.19 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 208/500  mean_reward=-5.281  kl=-0.0348  val_var_explained=0.891  policy_loss=0.2129
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (15940.01) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (42432804683776.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1285.10 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 209/500  mean_reward=-4.531  kl=0.0084  val_var_explained=0.915  policy_loss=0.0426
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (12.23) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1203.79 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 210/500  mean_reward=-4.531  kl=0.0363  val_var_explained=0.908  policy_loss=0.1576
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1592.23 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 211/500  mean_reward=-4.719  kl=0.0489  val_var_explained=0.909  policy_loss=-0.0034
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (744.54) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1395.77 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 212/500  mean_reward=-4.188  kl=-0.0405  val_var_explained=0.912  policy_loss=0.1608
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1546.62 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 213/500  mean_reward=-4.406  kl=0.1529  val_var_explained=0.910  policy_loss=0.0285
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1132.11 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 214/500  mean_reward=-3.938  kl=0.0456  val_var_explained=0.929  policy_loss=0.0404
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (23942692.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1529.19 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 215/500  mean_reward=-3.844  kl=0.0078  val_var_explained=0.916  policy_loss=0.2354
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (18560.29) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (120750472.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5485014016.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1367.62 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 216/500  mean_reward=-3.625  kl=-0.1973  val_var_explained=0.921  policy_loss=0.0485
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1078.96 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 217/500  mean_reward=-4.094  kl=0.0435  val_var_explained=0.932  policy_loss=0.2467
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1284.66 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 218/500  mean_reward=-3.016  kl=-0.0108  val_var_explained=0.932  policy_loss=0.3411
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (74.77) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -989.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 219/500  mean_reward=-1.438  kl=0.2828  val_var_explained=0.934  policy_loss=0.0741
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1294.89 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 220/500  mean_reward=0.922  kl=0.0184  val_var_explained=0.935  policy_loss=0.0036
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1871.70 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 221/500  mean_reward=0.408  kl=0.2506  val_var_explained=0.914  policy_loss=0.0225
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1322.53 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 222/500  mean_reward=0.859  kl=0.0869  val_var_explained=0.931  policy_loss=0.0984
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (49.66) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (66.79) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (626117.69) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (543608960.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (367832292199019678007296.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1194.07) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (804315392.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1539.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 223/500  mean_reward=1.180  kl=-0.4982  val_var_explained=0.921  policy_loss=-0.0229
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1936.31 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 224/500  mean_reward=1.102  kl=0.1538  val_var_explained=0.916  policy_loss=0.0198
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1335.60 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 225/500  mean_reward=0.898  kl=0.2001  val_var_explained=0.942  policy_loss=-0.0085
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1282.35 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 226/500  mean_reward=1.336  kl=0.1398  val_var_explained=0.946  policy_loss=0.0099
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (14992166781642558406656.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1797.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 227/500  mean_reward=0.816  kl=0.0162  val_var_explained=0.924  policy_loss=0.0591
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1886899072.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1562.49 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 228/500  mean_reward=0.108  kl=0.0850  val_var_explained=0.938  policy_loss=0.0818
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1727.92 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 229/500  mean_reward=0.266  kl=0.0668  val_var_explained=0.934  policy_loss=0.0016
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2014.06 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 230/500  mean_reward=0.852  kl=0.0535  val_var_explained=0.921  policy_loss=0.0308
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (298.67) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1953.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 231/500  mean_reward=0.977  kl=0.0305  val_var_explained=0.921  policy_loss=0.0609
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (12.89) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (476615280061549903872.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (150973.62) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (18362.14) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1975.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 232/500  mean_reward=1.289  kl=-0.1580  val_var_explained=0.916  policy_loss=-0.0119
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1738.55 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 233/500  mean_reward=0.980  kl=0.0845  val_var_explained=0.935  policy_loss=0.1361
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1976.12 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 234/500  mean_reward=0.695  kl=0.0535  val_var_explained=0.916  policy_loss=-0.0044
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1672.85 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 235/500  mean_reward=1.102  kl=0.0053  val_var_explained=0.938  policy_loss=-0.0069
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1866.14 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 236/500  mean_reward=0.512  kl=0.0361  val_var_explained=0.930  policy_loss=0.0352
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (25.14) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (39411256.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5019055.50) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (41916464889856.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1663.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 237/500  mean_reward=0.547  kl=1.3262  val_var_explained=0.849  policy_loss=2.1373
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3007555622553731989504.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (50582102653618060525568.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3457918324776391723448270848.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16261797566390436244750336.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (15230724473964082535286240706560.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (17545735438243954787807657984.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (578495069865196763808914210816.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -3258.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 238/500  mean_reward=1.188  kl=-4.5907  val_var_explained=0.801  policy_loss=-0.0225
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1416.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 239/500  mean_reward=-0.059  kl=0.0753  val_var_explained=0.863  policy_loss=0.1294
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (2061.32) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1149.89 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 240/500  mean_reward=1.086  kl=0.3602  val_var_explained=0.885  policy_loss=-0.0118
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1167.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 241/500  mean_reward=0.668  kl=0.1050  val_var_explained=0.905  policy_loss=-0.0019
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1452.31 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 242/500  mean_reward=0.475  kl=0.0398  val_var_explained=0.889  policy_loss=0.0253
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (17.56) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (837.69) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1205.95 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 243/500  mean_reward=0.613  kl=0.0628  val_var_explained=0.899  policy_loss=0.0263
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1455.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 244/500  mean_reward=0.363  kl=0.1043  val_var_explained=0.894  policy_loss=0.1703
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1755.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 245/500  mean_reward=-0.131  kl=0.0633  val_var_explained=0.902  policy_loss=0.0245
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1251.90 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 246/500  mean_reward=0.118  kl=0.0789  val_var_explained=0.911  policy_loss=0.0642
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1186.13 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 247/500  mean_reward=-0.520  kl=0.1143  val_var_explained=0.920  policy_loss=0.0544
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (26579.66) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (92543.35) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5555.82) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1633.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 248/500  mean_reward=0.385  kl=0.0039  val_var_explained=0.914  policy_loss=0.0347
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1638.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 249/500  mean_reward=0.781  kl=0.0430  val_var_explained=0.909  policy_loss=0.0003
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1139.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 250/500  mean_reward=-0.330  kl=0.0644  val_var_explained=0.927  policy_loss=0.0423
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (231.76) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1334.59 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 251/500  mean_reward=0.001  kl=0.0407  val_var_explained=0.928  policy_loss=0.0173
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (22475.97) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1752.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 252/500  mean_reward=-0.096  kl=0.0422  val_var_explained=0.905  policy_loss=-0.0071
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1878.31 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 253/500  mean_reward=0.042  kl=0.0442  val_var_explained=0.906  policy_loss=0.0100
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1732.06 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 254/500  mean_reward=0.145  kl=0.0323  val_var_explained=0.916  policy_loss=0.0582
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (45669.87) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (363570.12) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1993.14 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 255/500  mean_reward=0.465  kl=0.0208  val_var_explained=0.909  policy_loss=0.0331
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1524.11 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 256/500  mean_reward=0.355  kl=0.0542  val_var_explained=0.934  policy_loss=0.0182
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (45046.18) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1977.89 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 257/500  mean_reward=0.258  kl=0.0152  val_var_explained=0.913  policy_loss=0.1482
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (87405142999040.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1286.44 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 258/500  mean_reward=0.350  kl=-0.0131  val_var_explained=0.939  policy_loss=0.1114
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16.93) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1984.46 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 259/500  mean_reward=0.498  kl=0.0178  val_var_explained=0.911  policy_loss=-0.0142
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (19772.49) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1710.53 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 260/500  mean_reward=0.422  kl=0.0003  val_var_explained=0.922  policy_loss=0.0554
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1529.43 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 261/500  mean_reward=0.656  kl=0.0131  val_var_explained=0.927  policy_loss=0.0273
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (51303886861893632.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (44573.49) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (4295.38) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1192.86 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 262/500  mean_reward=0.508  kl=-0.0651  val_var_explained=0.934  policy_loss=0.0609
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1453.31 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 263/500  mean_reward=-0.117  kl=0.0839  val_var_explained=0.931  policy_loss=0.0605
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1409.51 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 264/500  mean_reward=-0.547  kl=0.0559  val_var_explained=0.930  policy_loss=0.0614
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1851.56 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 265/500  mean_reward=-0.527  kl=0.0536  val_var_explained=0.923  policy_loss=0.0868
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1247.05 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 266/500  mean_reward=-0.307  kl=0.0039  val_var_explained=0.943  policy_loss=0.0360
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1441.83 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 267/500  mean_reward=0.455  kl=0.0368  val_var_explained=0.940  policy_loss=0.0050
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1555.77 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 268/500  mean_reward=0.119  kl=0.0312  val_var_explained=0.934  policy_loss=0.0485
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1477.65 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 269/500  mean_reward=-0.279  kl=0.0057  val_var_explained=0.942  policy_loss=0.0254
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (596.72) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1721.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 270/500  mean_reward=-0.270  kl=0.0033  val_var_explained=0.932  policy_loss=0.0525
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (35193.19) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1826.06 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 271/500  mean_reward=0.645  kl=0.0135  val_var_explained=0.930  policy_loss=0.0751
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1787.75 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 272/500  mean_reward=0.303  kl=0.0153  val_var_explained=0.928  policy_loss=0.1270
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (261610.77) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1906.13 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 273/500  mean_reward=0.289  kl=-0.0068  val_var_explained=0.919  policy_loss=0.0744
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1511.39 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 274/500  mean_reward=-0.010  kl=0.0109  val_var_explained=0.933  policy_loss=0.0390
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1845.77 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 275/500  mean_reward=0.439  kl=0.0279  val_var_explained=0.931  policy_loss=0.0715
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1140.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 276/500  mean_reward=-0.233  kl=0.0395  val_var_explained=0.949  policy_loss=0.2356
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (11477.99) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1385.90 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 277/500  mean_reward=-0.271  kl=-0.0181  val_var_explained=0.948  policy_loss=0.0657
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (509864704.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (77.68) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10.46) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (336.73) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1765.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 278/500  mean_reward=-0.320  kl=-0.1126  val_var_explained=0.935  policy_loss=0.0201
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1766.93 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 279/500  mean_reward=0.121  kl=0.0522  val_var_explained=0.939  policy_loss=0.0227
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1614.39 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 280/500  mean_reward=-0.898  kl=0.0346  val_var_explained=0.944  policy_loss=0.0255
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1758.91 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 281/500  mean_reward=0.202  kl=0.0364  val_var_explained=0.940  policy_loss=0.0340
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1410.13 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 282/500  mean_reward=0.555  kl=0.0223  val_var_explained=0.941  policy_loss=0.0261
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1541.61 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 283/500  mean_reward=-0.559  kl=0.0332  val_var_explained=0.944  policy_loss=0.0343
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (41.83) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1909.42 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 284/500  mean_reward=-0.355  kl=-0.0425  val_var_explained=0.926  policy_loss=0.0174
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1773.49 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 285/500  mean_reward=-0.707  kl=0.0257  val_var_explained=0.933  policy_loss=0.0174
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3737.54) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1659.48 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 286/500  mean_reward=0.138  kl=0.0168  val_var_explained=0.943  policy_loss=0.0752
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1680.55 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 287/500  mean_reward=-1.070  kl=0.0118  val_var_explained=0.942  policy_loss=0.0370
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (189.22) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1636.39 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 288/500  mean_reward=-1.367  kl=0.0139  val_var_explained=0.938  policy_loss=0.3809
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (857.37) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (81.30) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1856.95 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 289/500  mean_reward=-1.062  kl=-0.0158  val_var_explained=0.934  policy_loss=0.0046
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16.67) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1924.87 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 290/500  mean_reward=-0.906  kl=-0.0088  val_var_explained=0.931  policy_loss=0.0405
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (705.48) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1395.41 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 291/500  mean_reward=0.154  kl=-0.0145  val_var_explained=0.947  policy_loss=0.0979
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1906.37 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 292/500  mean_reward=-0.480  kl=0.0188  val_var_explained=0.933  policy_loss=0.0006
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2188.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 293/500  mean_reward=-0.656  kl=-0.0123  val_var_explained=0.931  policy_loss=0.0524
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1704766208.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1709.62 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 294/500  mean_reward=-0.225  kl=-0.0422  val_var_explained=0.942  policy_loss=0.0895
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1490.48 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 295/500  mean_reward=-0.605  kl=0.0271  val_var_explained=0.941  policy_loss=0.0624
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1709.10 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 296/500  mean_reward=-0.277  kl=-0.0082  val_var_explained=0.944  policy_loss=0.0175
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1611.33 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 297/500  mean_reward=-1.023  kl=0.0201  val_var_explained=0.938  policy_loss=0.0524
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1138.32 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 298/500  mean_reward=-0.965  kl=0.0299  val_var_explained=0.959  policy_loss=0.0127
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1743.44 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 299/500  mean_reward=-0.684  kl=0.0201  val_var_explained=0.927  policy_loss=0.0718
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1892.74 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 300/500  mean_reward=-0.516  kl=-0.0105  val_var_explained=0.936  policy_loss=0.0705
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1422: UserWarning: Cannot retrieve user information assuming you are running in offline mode.
+  warnings.warn("Cannot retrieve user information assuming you are running in offline mode.")
+  [checkpoint saved at step 300 -> /workspace/rlhf-lab/results/ppo_checkpoint]
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1284.57 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 301/500  mean_reward=-1.320  kl=0.0042  val_var_explained=0.953  policy_loss=0.0639
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10619.51) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1766.75 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 302/500  mean_reward=-0.789  kl=-0.0176  val_var_explained=0.944  policy_loss=0.1080
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1785.81 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 303/500  mean_reward=-0.988  kl=-0.0018  val_var_explained=0.947  policy_loss=0.0400
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2091.79 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 304/500  mean_reward=-1.016  kl=-0.0093  val_var_explained=0.933  policy_loss=0.0508
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (15.19) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1349.42 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 305/500  mean_reward=-1.961  kl=-0.0107  val_var_explained=0.951  policy_loss=0.1595
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2021.90 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 306/500  mean_reward=-0.355  kl=0.0050  val_var_explained=0.938  policy_loss=0.0821
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1340.41 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 307/500  mean_reward=-1.625  kl=-0.0110  val_var_explained=0.954  policy_loss=0.0092
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (27.75) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1850.45 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 308/500  mean_reward=-0.770  kl=-0.0111  val_var_explained=0.941  policy_loss=-0.0011
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1996.91 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 309/500  mean_reward=-0.898  kl=-0.0011  val_var_explained=0.941  policy_loss=0.0735
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1759.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 310/500  mean_reward=-0.883  kl=0.0233  val_var_explained=0.935  policy_loss=0.0426
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (2352.98) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1863.20 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 311/500  mean_reward=-1.344  kl=-0.0810  val_var_explained=0.936  policy_loss=0.1377
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (17.59) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1970.60 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 312/500  mean_reward=-0.471  kl=-0.0460  val_var_explained=0.936  policy_loss=0.0306
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1605.24 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 313/500  mean_reward=-1.180  kl=-0.0079  val_var_explained=0.948  policy_loss=0.0496
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3412133401052839936.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1974.49 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 314/500  mean_reward=-1.047  kl=-0.0776  val_var_explained=0.940  policy_loss=0.1508
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1728.85 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 315/500  mean_reward=-0.793  kl=0.0177  val_var_explained=0.947  policy_loss=0.0256
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1910.26 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 316/500  mean_reward=-1.516  kl=-0.0080  val_var_explained=0.938  policy_loss=0.1005
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2113.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 317/500  mean_reward=0.311  kl=-0.0015  val_var_explained=0.940  policy_loss=0.0248
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1588.64 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 318/500  mean_reward=-1.016  kl=-0.0223  val_var_explained=0.955  policy_loss=0.0359
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1585.48 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 319/500  mean_reward=-0.742  kl=0.0511  val_var_explained=0.953  policy_loss=0.0728
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1968.32 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 320/500  mean_reward=-1.117  kl=-0.0511  val_var_explained=0.945  policy_loss=0.0811
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1288.48 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 321/500  mean_reward=-2.062  kl=-0.0078  val_var_explained=0.960  policy_loss=0.0493
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2332.65 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 322/500  mean_reward=-0.828  kl=0.0192  val_var_explained=0.936  policy_loss=0.0162
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1714.89 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 323/500  mean_reward=-0.158  kl=-0.0241  val_var_explained=0.956  policy_loss=0.0269
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (60.07) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (11450426696286647051354112.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1556.67 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 324/500  mean_reward=-0.652  kl=-0.0528  val_var_explained=0.955  policy_loss=0.0286
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1807.66 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 325/500  mean_reward=-1.789  kl=-0.0019  val_var_explained=0.946  policy_loss=0.0411
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1580.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 326/500  mean_reward=-1.578  kl=0.0036  val_var_explained=0.956  policy_loss=0.0021
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1743.15 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 327/500  mean_reward=-1.539  kl=-0.0011  val_var_explained=0.952  policy_loss=0.0422
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1693.45 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 328/500  mean_reward=-1.734  kl=-0.0263  val_var_explained=0.954  policy_loss=0.0673
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16.77) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (887846.25) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (23.94) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1637.78 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 329/500  mean_reward=-1.656  kl=-0.0664  val_var_explained=0.953  policy_loss=0.0856
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (11.49) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1515.47 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 330/500  mean_reward=-1.719  kl=0.0155  val_var_explained=0.953  policy_loss=0.1728
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1841.59 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 331/500  mean_reward=-2.344  kl=0.0409  val_var_explained=0.941  policy_loss=0.0712
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1799.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 332/500  mean_reward=-2.109  kl=0.0041  val_var_explained=0.944  policy_loss=0.0498
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (6623899363285971621080203264.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (418786696071479296.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3146.73) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2076.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 333/500  mean_reward=-2.203  kl=-0.1802  val_var_explained=0.935  policy_loss=0.1687
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1925.23 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 334/500  mean_reward=-1.117  kl=0.0523  val_var_explained=0.952  policy_loss=0.0119
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1564.03 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 335/500  mean_reward=-2.766  kl=0.1533  val_var_explained=0.950  policy_loss=0.2082
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1972.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 336/500  mean_reward=-1.734  kl=0.0281  val_var_explained=0.945  policy_loss=0.0896
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (57.67) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (23.59) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (530496458978230272.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (14684283904.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (934086.50) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1876.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 337/500  mean_reward=-2.047  kl=-0.4500  val_var_explained=0.937  policy_loss=0.1718
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2014.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 338/500  mean_reward=-1.422  kl=0.0956  val_var_explained=0.946  policy_loss=0.0340
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1285.49 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 339/500  mean_reward=-3.359  kl=0.0324  val_var_explained=0.963  policy_loss=0.0489
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1729.56 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 340/500  mean_reward=-2.344  kl=0.0238  val_var_explained=0.949  policy_loss=0.0390
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1644.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 341/500  mean_reward=-0.875  kl=0.0714  val_var_explained=0.954  policy_loss=0.0409
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1606.24 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 342/500  mean_reward=-1.641  kl=0.0245  val_var_explained=0.954  policy_loss=0.0195
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1772.23 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 343/500  mean_reward=-2.734  kl=0.0339  val_var_explained=0.953  policy_loss=0.0284
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1886.37 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 344/500  mean_reward=-1.148  kl=0.0651  val_var_explained=0.949  policy_loss=0.0152
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2013.23 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 345/500  mean_reward=-1.273  kl=-0.0058  val_var_explained=0.955  policy_loss=0.0197
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1919.91 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 346/500  mean_reward=-1.492  kl=0.0238  val_var_explained=0.951  policy_loss=0.0233
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1482.77 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 347/500  mean_reward=-2.203  kl=0.0219  val_var_explained=0.960  policy_loss=0.0192
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2257.10 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 348/500  mean_reward=-1.172  kl=0.0236  val_var_explained=0.940  policy_loss=0.0446
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2003.71 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 349/500  mean_reward=-1.391  kl=0.0143  val_var_explained=0.955  policy_loss=0.0171
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1784.72 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 350/500  mean_reward=-1.555  kl=0.0175  val_var_explained=0.957  policy_loss=0.0242
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1838.30 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 351/500  mean_reward=-1.578  kl=-0.0130  val_var_explained=0.955  policy_loss=0.0615
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (14398.85) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (155.39) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1592.89 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 352/500  mean_reward=-1.312  kl=-0.0854  val_var_explained=0.962  policy_loss=0.0865
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1271.95 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 353/500  mean_reward=-1.398  kl=0.0001  val_var_explained=0.969  policy_loss=0.0155
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1707.28 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 354/500  mean_reward=-1.055  kl=0.0047  val_var_explained=0.961  policy_loss=0.0468
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1541.99 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 355/500  mean_reward=-1.336  kl=0.0740  val_var_explained=0.962  policy_loss=0.0734
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (28.48) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1917.98 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 356/500  mean_reward=-0.773  kl=0.0127  val_var_explained=0.951  policy_loss=0.0676
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2264.80 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 357/500  mean_reward=-0.318  kl=0.0308  val_var_explained=0.950  policy_loss=0.0230
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1922.57 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 358/500  mean_reward=-2.000  kl=0.0140  val_var_explained=0.946  policy_loss=0.0311
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2042.98 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 359/500  mean_reward=-0.906  kl=0.0228  val_var_explained=0.947  policy_loss=0.0542
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (138.14) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2140.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 360/500  mean_reward=-1.281  kl=-0.0388  val_var_explained=0.953  policy_loss=0.0389
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1723.81 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 361/500  mean_reward=0.071  kl=0.0352  val_var_explained=0.961  policy_loss=0.0517
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1799.86 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 362/500  mean_reward=-0.777  kl=-0.0155  val_var_explained=0.957  policy_loss=0.0477
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1429.44 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 363/500  mean_reward=-1.555  kl=0.0067  val_var_explained=0.966  policy_loss=0.0171
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (32761.02) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2149.97 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 364/500  mean_reward=-0.816  kl=-0.0409  val_var_explained=0.953  policy_loss=0.1414
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (410627.62) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1956.42 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 365/500  mean_reward=-0.969  kl=-0.0466  val_var_explained=0.957  policy_loss=0.0851
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1647.69 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 366/500  mean_reward=-0.531  kl=0.0308  val_var_explained=0.962  policy_loss=0.0662
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2322.21 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 367/500  mean_reward=-0.816  kl=-0.0221  val_var_explained=0.952  policy_loss=0.0237
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2127.81 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 368/500  mean_reward=-0.949  kl=0.0512  val_var_explained=0.950  policy_loss=0.0351
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1947.79 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 369/500  mean_reward=-0.758  kl=-0.0405  val_var_explained=0.959  policy_loss=0.0345
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1951.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 370/500  mean_reward=-0.754  kl=-0.0021  val_var_explained=0.957  policy_loss=0.0724
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1658.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 371/500  mean_reward=-1.703  kl=-0.0333  val_var_explained=0.960  policy_loss=0.0776
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1723.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 372/500  mean_reward=-1.852  kl=0.0269  val_var_explained=0.963  policy_loss=0.0376
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1788.78 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 373/500  mean_reward=-1.828  kl=0.0212  val_var_explained=0.959  policy_loss=0.0636
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1950.14 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 374/500  mean_reward=-1.594  kl=0.0228  val_var_explained=0.952  policy_loss=0.0338
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1687.60 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 375/500  mean_reward=-1.648  kl=-0.0445  val_var_explained=0.962  policy_loss=0.1202
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (267031.47) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2441.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 376/500  mean_reward=-1.359  kl=0.0826  val_var_explained=0.940  policy_loss=0.1069
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (76.82) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (187111307214848.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1740.40 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 377/500  mean_reward=-1.453  kl=-0.1066  val_var_explained=0.961  policy_loss=0.1238
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1409.34) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2065.68 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 378/500  mean_reward=-1.227  kl=-0.0082  val_var_explained=0.950  policy_loss=0.2497
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1700.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 379/500  mean_reward=-1.062  kl=0.0643  val_var_explained=0.965  policy_loss=0.0212
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2128.06 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 380/500  mean_reward=-1.164  kl=0.0058  val_var_explained=0.957  policy_loss=0.0556
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1907.85 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 381/500  mean_reward=-2.141  kl=-0.0109  val_var_explained=0.961  policy_loss=0.0401
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2355.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 382/500  mean_reward=-0.848  kl=-0.0231  val_var_explained=0.952  policy_loss=0.0407
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1977.47 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 383/500  mean_reward=-2.422  kl=-0.0272  val_var_explained=0.960  policy_loss=0.0567
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (6278.69) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2018.39 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 384/500  mean_reward=-1.125  kl=-0.0257  val_var_explained=0.956  policy_loss=0.1719
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (122.36) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1589.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 385/500  mean_reward=-2.031  kl=-0.0089  val_var_explained=0.968  policy_loss=0.0821
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1632.72 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 386/500  mean_reward=-2.719  kl=0.0095  val_var_explained=0.965  policy_loss=0.0758
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2446.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 387/500  mean_reward=-1.773  kl=-0.0367  val_var_explained=0.949  policy_loss=0.0809
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2156.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 388/500  mean_reward=-1.391  kl=0.0177  val_var_explained=0.948  policy_loss=0.0564
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1470.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 389/500  mean_reward=-2.266  kl=-0.0037  val_var_explained=0.971  policy_loss=0.0509
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2022.29 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 390/500  mean_reward=-2.625  kl=-0.0319  val_var_explained=0.958  policy_loss=0.0642
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (32.62) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2391.36 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 391/500  mean_reward=-2.250  kl=-0.0104  val_var_explained=0.946  policy_loss=0.0206
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2581.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 392/500  mean_reward=-1.781  kl=0.0148  val_var_explained=0.949  policy_loss=0.0174
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2016.24 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 393/500  mean_reward=-2.031  kl=-0.0393  val_var_explained=0.953  policy_loss=0.0923
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (24.38) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5490.03) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1944.90 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 394/500  mean_reward=-2.781  kl=-0.0965  val_var_explained=0.960  policy_loss=0.1539
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1802.83 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 395/500  mean_reward=-1.781  kl=0.0129  val_var_explained=0.965  policy_loss=0.0336
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1767.64 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 396/500  mean_reward=-1.414  kl=0.0256  val_var_explained=0.963  policy_loss=0.0397
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (494.90) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2179.60 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 397/500  mean_reward=-1.719  kl=-0.0472  val_var_explained=0.961  policy_loss=0.1303
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2314.50 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 398/500  mean_reward=-1.914  kl=0.0170  val_var_explained=0.952  policy_loss=0.0434
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1897.81 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 399/500  mean_reward=-0.793  kl=-0.0332  val_var_explained=0.965  policy_loss=0.1077
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1898.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 400/500  mean_reward=-2.188  kl=-0.0011  val_var_explained=0.956  policy_loss=0.0435
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1422: UserWarning: Cannot retrieve user information assuming you are running in offline mode.
+  warnings.warn("Cannot retrieve user information assuming you are running in offline mode.")
+  [checkpoint saved at step 400 -> /workspace/rlhf-lab/results/ppo_checkpoint]
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2296.69 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 401/500  mean_reward=-1.586  kl=-0.0409  val_var_explained=0.951  policy_loss=0.0489
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2655.96 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 402/500  mean_reward=-1.906  kl=0.0001  val_var_explained=0.947  policy_loss=0.0709
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2246.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 403/500  mean_reward=-1.758  kl=0.0151  val_var_explained=0.954  policy_loss=0.0750
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1939.37 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 404/500  mean_reward=-1.164  kl=0.0143  val_var_explained=0.962  policy_loss=0.0212
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1997.32 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 405/500  mean_reward=-2.141  kl=0.0173  val_var_explained=0.962  policy_loss=0.0520
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (468.87) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1972.09 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 406/500  mean_reward=-1.711  kl=-0.0012  val_var_explained=0.962  policy_loss=0.0411
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (11.38) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1787.47 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 407/500  mean_reward=-2.938  kl=-0.0586  val_var_explained=0.969  policy_loss=0.1062
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1918.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 408/500  mean_reward=-2.422  kl=-0.0435  val_var_explained=0.963  policy_loss=0.1854
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2105.11 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 409/500  mean_reward=-2.000  kl=0.0800  val_var_explained=0.962  policy_loss=0.0193
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1821.40 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 410/500  mean_reward=-1.758  kl=-0.0408  val_var_explained=0.966  policy_loss=0.0338
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1914.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 411/500  mean_reward=-1.500  kl=0.0202  val_var_explained=0.963  policy_loss=0.0069
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (28774036.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2553.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 412/500  mean_reward=-1.898  kl=-0.0767  val_var_explained=0.953  policy_loss=0.1191
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2064.04 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 413/500  mean_reward=-2.141  kl=0.0099  val_var_explained=0.958  policy_loss=0.0258
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2030.52 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 414/500  mean_reward=-1.344  kl=-0.0014  val_var_explained=0.965  policy_loss=0.0367
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2075.56 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 415/500  mean_reward=-1.758  kl=0.0055  val_var_explained=0.955  policy_loss=0.0243
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1969.79 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 416/500  mean_reward=-1.469  kl=0.0143  val_var_explained=0.963  policy_loss=0.0086
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1735.51 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 417/500  mean_reward=-1.586  kl=0.0252  val_var_explained=0.969  policy_loss=0.0334
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (15.03) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2033.78 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 418/500  mean_reward=-1.594  kl=-0.0468  val_var_explained=0.963  policy_loss=0.1954
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1891.21 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 419/500  mean_reward=-1.953  kl=0.0100  val_var_explained=0.964  policy_loss=0.0994
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2423.28 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 420/500  mean_reward=-1.289  kl=0.0183  val_var_explained=0.954  policy_loss=0.0680
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (35.59) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1548.26 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 421/500  mean_reward=-1.453  kl=0.0024  val_var_explained=0.970  policy_loss=0.0595
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2327.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 422/500  mean_reward=-0.832  kl=0.0694  val_var_explained=0.954  policy_loss=0.0277
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2436.59 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 423/500  mean_reward=-0.762  kl=-0.0098  val_var_explained=0.956  policy_loss=0.0335
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2575.30 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 424/500  mean_reward=-0.547  kl=-0.0725  val_var_explained=0.954  policy_loss=0.0845
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1237272700648397721305088.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (315767.41) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2433.27 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 425/500  mean_reward=-1.469  kl=-0.0440  val_var_explained=0.957  policy_loss=0.2281
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2428.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 426/500  mean_reward=-0.656  kl=-0.0042  val_var_explained=0.959  policy_loss=0.1302
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (2923.73) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (231.10) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (12.21) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2040.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 427/500  mean_reward=-0.625  kl=-0.1310  val_var_explained=0.964  policy_loss=0.5096
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1702.25 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 428/500  mean_reward=-1.812  kl=0.7270  val_var_explained=0.968  policy_loss=0.1692
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16.02) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (93.95) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (408.62) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (85.47) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (476.11) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (201130.41) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2624.33 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 429/500  mean_reward=-0.359  kl=-0.2479  val_var_explained=0.956  policy_loss=0.0518
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1670.32 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 430/500  mean_reward=-2.078  kl=0.0351  val_var_explained=0.973  policy_loss=0.0379
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2230.44 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 431/500  mean_reward=-1.492  kl=-0.0196  val_var_explained=0.959  policy_loss=0.0264
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2435.46 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 432/500  mean_reward=-1.312  kl=-0.0040  val_var_explained=0.954  policy_loss=0.0522
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (751.03) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1891.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 433/500  mean_reward=-1.461  kl=-0.0251  val_var_explained=0.967  policy_loss=0.0380
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1535.02 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 434/500  mean_reward=-1.227  kl=0.0190  val_var_explained=0.975  policy_loss=0.0332
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2016.92 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 435/500  mean_reward=-0.582  kl=0.0003  val_var_explained=0.967  policy_loss=0.0318
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (32.04) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10.56) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (815.34) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (162.87) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2143.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 436/500  mean_reward=-1.109  kl=0.0580  val_var_explained=0.963  policy_loss=0.1338
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1965.68 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 437/500  mean_reward=-0.895  kl=-0.0055  val_var_explained=0.965  policy_loss=0.0636
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (64.42) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (282080835534848.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (54.99) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (17185.72) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1867.71 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 438/500  mean_reward=-0.504  kl=-0.2146  val_var_explained=0.962  policy_loss=0.0841
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (13.46) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (65.61) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2309.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 439/500  mean_reward=-0.186  kl=-0.0649  val_var_explained=0.963  policy_loss=0.1768
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2017.69 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 440/500  mean_reward=-0.385  kl=0.0121  val_var_explained=0.967  policy_loss=0.0267
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2236.77 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 441/500  mean_reward=-0.969  kl=0.0212  val_var_explained=0.964  policy_loss=0.0326
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2355.42 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 442/500  mean_reward=-1.078  kl=-0.0042  val_var_explained=0.963  policy_loss=0.0704
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1958.90 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 443/500  mean_reward=-1.203  kl=-0.0375  val_var_explained=0.971  policy_loss=0.0661
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2172.56 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 444/500  mean_reward=-1.125  kl=-0.0172  val_var_explained=0.965  policy_loss=0.1266
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2618.56 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 445/500  mean_reward=-0.973  kl=0.0130  val_var_explained=0.961  policy_loss=0.0326
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1670.73 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 446/500  mean_reward=-1.078  kl=-0.0264  val_var_explained=0.975  policy_loss=0.0771
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2512.96 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 447/500  mean_reward=-0.695  kl=0.0221  val_var_explained=0.961  policy_loss=0.0585
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1940.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 448/500  mean_reward=-1.500  kl=0.0197  val_var_explained=0.971  policy_loss=0.0428
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1704.03 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 449/500  mean_reward=-1.031  kl=-0.0127  val_var_explained=0.973  policy_loss=0.0536
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2545.55 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 450/500  mean_reward=-0.785  kl=0.0300  val_var_explained=0.959  policy_loss=0.0801
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2491.36 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 451/500  mean_reward=-1.070  kl=0.0125  val_var_explained=0.961  policy_loss=0.0531
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (20191.31) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2225.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 452/500  mean_reward=-1.422  kl=-0.0061  val_var_explained=0.968  policy_loss=0.1714
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (60493.97) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2165.64 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 453/500  mean_reward=-0.766  kl=-0.0449  val_var_explained=0.966  policy_loss=0.0328
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2260.39 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 454/500  mean_reward=-0.555  kl=-0.0070  val_var_explained=0.966  policy_loss=0.0340
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2042.72 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 455/500  mean_reward=-1.469  kl=-0.0403  val_var_explained=0.969  policy_loss=0.1107
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2542.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 456/500  mean_reward=0.311  kl=-0.0553  val_var_explained=0.964  policy_loss=0.0574
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (33022760145911808.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1983.63 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 457/500  mean_reward=-0.762  kl=-0.0549  val_var_explained=0.971  policy_loss=0.0429
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1869.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 458/500  mean_reward=-1.148  kl=-0.0173  val_var_explained=0.976  policy_loss=0.0376
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1529.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 459/500  mean_reward=-0.496  kl=0.0334  val_var_explained=0.981  policy_loss=0.0189
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (36.07) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2097.99 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 460/500  mean_reward=-1.070  kl=-0.0220  val_var_explained=0.968  policy_loss=0.1978
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2057.67 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 461/500  mean_reward=-0.941  kl=-0.0074  val_var_explained=0.972  policy_loss=0.0237
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (190.05) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (11263.93) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (1410137487048704.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (5834516480.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (306011.81) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10509890560.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1882.50 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 462/500  mean_reward=-0.676  kl=-0.5955  val_var_explained=0.966  policy_loss=0.0410
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2285.67 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 463/500  mean_reward=-1.484  kl=0.0810  val_var_explained=0.959  policy_loss=0.0633
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2712.94 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 464/500  mean_reward=-1.625  kl=0.4414  val_var_explained=0.955  policy_loss=0.1365
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1864.85 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 465/500  mean_reward=-1.383  kl=0.0404  val_var_explained=0.975  policy_loss=0.0192
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1672.71 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 466/500  mean_reward=-1.703  kl=-0.0038  val_var_explained=0.978  policy_loss=0.0700
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2606.16 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 467/500  mean_reward=-0.832  kl=0.0364  val_var_explained=0.965  policy_loss=0.0224
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2165.17 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 468/500  mean_reward=-1.312  kl=-0.0340  val_var_explained=0.972  policy_loss=0.1134
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2333.08 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 469/500  mean_reward=-1.164  kl=0.0323  val_var_explained=0.967  policy_loss=0.0424
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2081.58 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 470/500  mean_reward=-0.402  kl=-0.0270  val_var_explained=0.970  policy_loss=0.0856
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2090.87 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 471/500  mean_reward=-0.758  kl=-0.0046  val_var_explained=0.971  policy_loss=0.0423
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1967.12 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 472/500  mean_reward=-0.863  kl=-0.0191  val_var_explained=0.975  policy_loss=0.0977
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1750.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 473/500  mean_reward=-1.531  kl=0.0115  val_var_explained=0.978  policy_loss=0.0167
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2176.05 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 474/500  mean_reward=-1.430  kl=0.0255  val_var_explained=0.972  policy_loss=0.0248
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2650.34 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 475/500  mean_reward=-1.305  kl=-0.0451  val_var_explained=0.964  policy_loss=0.0634
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (159613040.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2187.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 476/500  mean_reward=-0.762  kl=-0.0352  val_var_explained=0.972  policy_loss=0.0584
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (32734951424.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2236.84 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 477/500  mean_reward=-0.469  kl=-0.0073  val_var_explained=0.970  policy_loss=0.1327
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2263.86 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 478/500  mean_reward=-1.883  kl=-0.0107  val_var_explained=0.968  policy_loss=0.0969
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2235.57 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 479/500  mean_reward=-1.398  kl=-0.0306  val_var_explained=0.973  policy_loss=0.1787
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (38.38) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2213.41 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 480/500  mean_reward=-0.742  kl=-0.0497  val_var_explained=0.971  policy_loss=0.1375
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10.04) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2042.91 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 481/500  mean_reward=-1.938  kl=-0.0095  val_var_explained=0.972  policy_loss=0.1034
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (23.84) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2376.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 482/500  mean_reward=-0.648  kl=-0.0381  val_var_explained=0.964  policy_loss=0.1282
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (10.06) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2176.53 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 483/500  mean_reward=-1.203  kl=-0.0461  val_var_explained=0.968  policy_loss=0.1437
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (48694049574636272746496.00) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (38.84) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (16.36) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (89946.82) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2700.88 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 484/500  mean_reward=-1.102  kl=-0.1974  val_var_explained=0.964  policy_loss=0.0805
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (9635.01) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1946.30 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 485/500  mean_reward=-0.934  kl=-0.0400  val_var_explained=0.974  policy_loss=0.1338
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2374.26 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 486/500  mean_reward=-1.516  kl=-0.0115  val_var_explained=0.970  policy_loss=0.0724
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2060.62 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 487/500  mean_reward=-2.172  kl=-0.0008  val_var_explained=0.976  policy_loss=0.0214
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2203.37 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 488/500  mean_reward=-0.938  kl=0.0393  val_var_explained=0.964  policy_loss=0.0345
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (538202.50) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2253.22 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 489/500  mean_reward=-0.520  kl=-0.0478  val_var_explained=0.972  policy_loss=0.0426
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2024.55 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 490/500  mean_reward=-1.211  kl=0.0758  val_var_explained=0.975  policy_loss=0.0979
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2384.00 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 491/500  mean_reward=-2.156  kl=0.0141  val_var_explained=0.969  policy_loss=0.0672
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2524.96 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 492/500  mean_reward=-1.344  kl=0.0284  val_var_explained=0.963  policy_loss=0.1258
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2114.92 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 493/500  mean_reward=-1.336  kl=-0.0288  val_var_explained=0.972  policy_loss=0.0913
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2086.15 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 494/500  mean_reward=-1.320  kl=-0.0293  val_var_explained=0.977  policy_loss=0.1180
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2217.11 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 495/500  mean_reward=-0.179  kl=0.0259  val_var_explained=0.973  policy_loss=0.0378
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (3314.50) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -1884.34 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 496/500  mean_reward=-2.172  kl=-0.0497  val_var_explained=0.978  policy_loss=0.0338
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1237: UserWarning: The average ratio of batch (218557.47) exceeds threshold 10.00. Skipping batch.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2032.51 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 497/500  mean_reward=-0.075  kl=-0.0321  val_var_explained=0.975  policy_loss=0.0723
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2574.14 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 498/500  mean_reward=-1.648  kl=-0.0701  val_var_explained=0.968  policy_loss=0.1622
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1304: UserWarning: KL divergence is starting to become negative: -2583.60 - this might be a precursor for failed training. sometimes this happens because the generation kwargs are not correctly set. Please make sure that the generation kwargs are set correctly, or review your training hyperparameters.
+  warnings.warn(
+step 499/500  mean_reward=-0.875  kl=0.0110  val_var_explained=0.970  policy_loss=0.0443
+/usr/local/lib/python3.11/dist-packages/trl/trainer/ppo_trainer.py:1422: UserWarning: Cannot retrieve user information assuming you are running in offline mode.
+  warnings.warn("Cannot retrieve user information assuming you are running in offline mode.")
+PPO checkpoint saved to /workspace/rlhf-lab/results/ppo
