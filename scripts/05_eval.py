@@ -45,7 +45,8 @@ def judge(client, prompt, response_a, response_b, judge_backend):
             max_tokens=5,
             messages=[{"role": "user", "content": text}],
         )
-        verdict = resp.content[0].text.strip().upper()
+        text_block = next(b for b in resp.content if b.type == "text")
+        verdict = text_block.text.strip().upper()
     else:
         resp = client.chat.completions.create(
             model="gpt-4o-mini",
