@@ -40,13 +40,21 @@ def generate(model, tokenizer, prompt, device):
 def judge(client, prompt, response_a, response_b, judge_backend):
     text = JUDGE_PROMPT.format(prompt=prompt, response_a=response_a, response_b=response_b)
     if judge_backend == "anthropic":
-        resp = client.messages.create(
-            model="claude-sonnet-5",
-            max_tokens=5,
-            messages=[{"role": "user", "content": text}],
-        )
-        text_block = next(b for b in resp.content if b.type == "text")
-        verdict = text_block.text.strip().upper()
+        verdict = None
+        for attempt in range(3):
+            resp = client.messages.create(
+                model="claude-sonnet-5",
+                max_tokens=20,
+                messages=[{"role": "user", "content": text}],
+            )
+            text_block = next((b for b in resp.content if b.type == "text"), None)
+            if text_block is not None:
+                verdict = text_block.text.strip().upper()
+                break
+            print(f"WARN: judge response had no text block (attempt {attempt + 1}/3), stop_reason={resp.stop_reason}", flush=True)
+        if verdict is None:
+            print("WARN: judge never returned a text block after retries, defaulting to 'A' for this pair", flush=True)
+            verdict = "A"
     else:
         resp = client.chat.completions.create(
             model="gpt-4o-mini",

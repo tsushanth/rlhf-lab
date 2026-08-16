@@ -28,16 +28,21 @@ either, but do not reply anything else.
 """
 
 
-def judge(client, prompt, response_a, response_b):
+def judge(client, prompt, response_a, response_b, max_retries=2):
     text = JUDGE_PROMPT.format(prompt=prompt, response_a=response_a, response_b=response_b)
-    resp = client.messages.create(
-        model="claude-sonnet-5",
-        max_tokens=5,
-        messages=[{"role": "user", "content": text}],
-    )
-    text_block = next(b for b in resp.content if b.type == "text")
-    verdict = text_block.text.strip().upper()
-    return "A" if "A" in verdict and "B" not in verdict else "B"
+    for attempt in range(max_retries + 1):
+        resp = client.messages.create(
+            model="claude-sonnet-5",
+            max_tokens=20,
+            messages=[{"role": "user", "content": text}],
+        )
+        text_block = next((b for b in resp.content if b.type == "text"), None)
+        if text_block is not None:
+            verdict = text_block.text.strip().upper()
+            return "A" if "A" in verdict and "B" not in verdict else "B"
+        print(f"WARN: judge response had no text block (attempt {attempt + 1}/{max_retries + 1}), stop_reason={resp.stop_reason}", flush=True)
+    print("WARN: judge never returned a text block after retries, defaulting to 'A' for this pair", flush=True)
+    return "A"
 
 
 def main():
