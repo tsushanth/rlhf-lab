@@ -45,6 +45,7 @@ def judge(client, prompt, response_a, response_b, judge_backend):
             resp = client.messages.create(
                 model="claude-sonnet-5",
                 max_tokens=20,
+                thinking={"type": "disabled"},
                 messages=[{"role": "user", "content": text}],
             )
             text_block = next((b for b in resp.content if b.type == "text"), None)
