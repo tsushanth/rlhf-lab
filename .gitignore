@@ -1,6 +1,7 @@
 # model checkpoints — large, regenerable, don't belong in git
 results/*
 !results/eval_report.md
+!results/rlaif_pairs_summary.md
 *.safetensors
 *.bin
 *.pt
