@@ -60,8 +60,9 @@ def main():
     config = DPOConfig(
         output_dir=out_dir,
         num_train_epochs=args.epochs,
-        per_device_train_batch_size=2,
-        gradient_accumulation_steps=8,
+        per_device_train_batch_size=1,
+        gradient_accumulation_steps=16,
+        gradient_checkpointing=True,
         learning_rate=5e-6,
         beta=args.beta,
         logging_steps=20,
