@@ -1,6 +1,6 @@
 # Experiment Progress Tracker
 
-Last updated: after commit `eeb7612`.
+Last updated: 2026-09-13 — starting RLAIF DPO run
 
 ## Completed ✅
 
@@ -14,11 +14,16 @@ Last updated: after commit `eeb7612`.
 | RLAIF pipeline (06 → 07) | ✅ | `results/rlaif_preference_pairs.jsonl` — 2000 pairs, Claude-judged |
 | Infrastructure scripts | ✅ | Committed: `04_dpo_rlaif.py`, `05b_automated_metrics.py`, `05_eval_v2.py`, `03_ppo_enhanced.py`, `run_ablations.sh` |
 
+## In Progress ⏳
+
+| Priority | Experiment | Script | Status |
+|----------|-----------|--------|--------|
+| **P0** | DPO on RLAIF data | `python scripts/04_dpo_rlaif.py --compare-human-dpo` | **STARTING NOW** |
+
 ## Pending 🔲
 
 | Priority | Experiment | Script | Status |
 |----------|-----------|--------|--------|
-| **P0** | DPO on RLAIF data | `python scripts/04_dpo_rlaif.py --compare-human-dpo` | NOT RUN |
 | **P0** | Automated metrics (base vs SFT) | `python scripts/05b_automated_metrics.py --include-base` | NOT RUN |
 | **P1** | Seed variance: DPO ×3 seeds | Run `04_dpo.py` with different `--seed` (needs manual seeding in script first) | NOT RUN |
 | **P1** | DPO beta sweep | `./scripts/run_ablations.sh` step 4 | NOT RUN |
@@ -41,3 +46,4 @@ Last updated: after commit `eeb7612`.
 |-----|----------------------|-------------------|-------|
 | Original pipeline | ~3.5 hrs | 300 (Claude) | PPO failed, DPO succeeded |
 | Full ablation suite | ~4.5 hrs | 600 (Claude + GPT-4o-mini) | Includes beta sweep + RLAIF DPO |
+| **RLAIF DPO** | **~30 min** | **0** | Using existing AI-labeled pairs |
